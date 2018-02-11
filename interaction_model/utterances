@@ -1,0 +1,17 @@
+PlayEasy easy
+PlayMedium medium
+PlayHard hard
+AnsEasy {EasyAnimals}
+AnsMedium {MediumAnimals}
+AnsHard {HardAnimals}
+AMAZON.CancelIntent cancel
+AMAZON.CancelIntent exit
+AMAZON.HelpIntent help
+AMAZON.StartOverIntent play
+AMAZON.StartOverIntent begin
+AMAZON.StartOverIntent new
+AMAZON.StartOverIntent main menu
+AMAZON.StartOverIntent menu
+AMAZON.StopIntent no thank you
+AMAZON.StopIntent no thanks
+AMAZON.StopIntent goodbye

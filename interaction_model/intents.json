@@ -1,0 +1,52 @@
+{
+  "intents": [
+    {
+      "intent": "PlayEasy"
+    },
+    {
+      "intent": "PlayMedium"
+    },
+    {
+      "intent": "PlayHard"
+    },
+    {
+      "intent": "AnsEasy",
+                "slots": [
+        {
+          "name": "EasyAnimals",
+          "type": "LIST_OF_EASY"
+        }
+      ]
+    },
+    {
+      "intent": "AnsMedium",
+                "slots": [
+        {
+          "name": "MediumAnimals",
+          "type": "LIST_OF_MEDIUM"
+        }
+      ]
+    },
+    {
+      "intent": "AnsHard",
+                "slots": [
+        {
+          "name": "HardAnimals",
+          "type": "LIST_OF_HARD"
+        }
+      ]
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StartOverIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    }
+  ]
+}
