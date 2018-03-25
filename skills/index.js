@@ -241,7 +241,7 @@ function ansEasy(intent, session, callback){
         audioOutput = audioOutput +  "<say-as interpret-as='interjection'>Wow!</say-as> Correct Answer. ";
         if(easyIdx > 2){
             //easy game ended
-            audioOutput = audioOutput +  "<say-as interpret-as='interjection'>Congratulations!</say-as> You have sucessfully completed the "+ LevelName[Levels.Easy] +" level. ";
+            audioOutput = audioOutput +  "<say-as interpret-as='interjection'>Congratulations!</say-as> You have successfully completed the "+ LevelName[Levels.Easy] +" level. ";
             audioOutput = audioOutput +  "Say "+ LevelName[Levels.Medium] +" or "+ LevelName[Levels.Hard] +" to change the level of difficulty. ";
         } else{
             audioOutput = audioOutput +  "Say "+ LevelName[Levels.Easy] +" again to hear the sound of next animal. ";
@@ -358,7 +358,7 @@ function ansMedium(intent, session, callback){
         audioOutput = audioOutput +  "<say-as interpret-as='interjection'>Wow!</say-as> Correct Answer. ";
         if(mediumIdx > 2){
             //medium game ended
-            audioOutput = audioOutput +  "<say-as interpret-as='interjection'>Congratulations!</say-as> You have sucessfully completed the medium level. ";
+            audioOutput = audioOutput +  "<say-as interpret-as='interjection'>Congratulations!</say-as> You have successfully completed the medium level. ";
             audioOutput = audioOutput +  "Say "+ LevelName[Levels.Easy] +" or "+ LevelName[Levels.Hard] +" to change the level of difficulty. ";
         } else{
             audioOutput = audioOutput +  "Say "+ LevelName[Levels.Medium] +" again to hear the sound of next animal. ";
@@ -472,7 +472,7 @@ function ansHard(intent, session, callback){
         audioOutput = audioOutput +  "<say-as interpret-as='interjection'>Wow!</say-as> Correct Answer. ";
         if(hardIdx > 2){
             //easy game ended
-            audioOutput = audioOutput +  "<say-as interpret-as='interjection'>Congratulations!</say-as> You have sucessfully completed the "+ LevelName[Levels.Hard] +" level. ";
+            audioOutput = audioOutput +  "<say-as interpret-as='interjection'>Congratulations!</say-as> You have successfully completed the "+ LevelName[Levels.Hard] +" level. ";
             audioOutput = audioOutput +  "Say "+ LevelName[Levels.Easy] +" or "+ LevelName[Levels.Medium] +" to change the level of difficulty. ";
         } else{
             audioOutput = audioOutput +  "Say "+ LevelName[Levels.Hard] +" again to hear the sound of next animal. ";
