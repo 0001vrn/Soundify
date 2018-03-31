@@ -265,7 +265,7 @@ function ansEasy(intent, session, callback){
         //output speech response like try again
         console.log("Incorrect response");
         var audioOutput = "<speak>";
-            audioOutput = audioOutput +  "Inorrect Answer. ";        
+            audioOutput = audioOutput +  "Incorrect Answer. ";        
             audioOutput = audioOutput +  "Say the name again. ";
     
         
@@ -382,7 +382,7 @@ function ansMedium(intent, session, callback){
         //output speech response like try again
         console.log("Incorrect response");
         var audioOutput = "<speak>";
-            audioOutput = audioOutput +  "Inorrect Answer. ";        
+            audioOutput = audioOutput +  "Incorrect Answer. ";        
             audioOutput = audioOutput +  "Say the name again. ";
     
         
@@ -496,7 +496,7 @@ function ansHard(intent, session, callback){
         //output speech response like try again
         console.log("Incorrect response");
         var audioOutput = "<speak>";
-            audioOutput = audioOutput +  "Inorrect Answer. ";        
+            audioOutput = audioOutput +  "Incorrect Answer. ";        
             audioOutput = audioOutput +  "Say the name again. ";
     
         
