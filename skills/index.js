@@ -1,4 +1,5 @@
-var aws = require('aws-sdk');
+'use strict';
+//var aws = require('aws-sdk');
 var soundDict = {
     Cat:'Cat_Kitten',
     Chimpanzee:'Chimpanzee',
@@ -514,8 +515,11 @@ function ansHard(intent, session, callback){
     }
 }
 
-function isCorrectResponse(level, idx, animalName){
-    
+function Soundify() {
+}
+
+Soundify.prototype.isCorrectResponse = function (level, idx, animalName){
+
     if(level == Levels.Easy){
         //easy
         return easyDict[idx].toLowerCase() === animalName;
@@ -528,7 +532,7 @@ function isCorrectResponse(level, idx, animalName){
     }
 
     return false;
-}
+};
 /**
  * Called when the user ends the session.
  * Is not called when the skill returns shouldEndSession=true.
@@ -707,3 +711,5 @@ function buildResponse(sessionAttributes, speechletResponse) {
 function getRandomArbitrary(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
+
+module.exports = Soundify;
