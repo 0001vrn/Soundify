@@ -1,3 +1,7 @@
+PlayPresidents presidents
+AnsPresidents {Presidents}
+PlayAnimals animals
+AnsAnimals {Animals}
 PlayEasy easy
 PlayMedium medium
 PlayHard hard

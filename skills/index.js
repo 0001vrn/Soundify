@@ -136,7 +136,19 @@ function onIntent(intentRequest, session, callback) {
 
     // Dispatch to the individual skill handlers
     
-    if("PlayEasy" === intentName){
+    if("PlayPresidents" === intentName){
+        //play presidents game
+        playPresidents(intent, session, callback);
+    } else if("AnsPresidents" === intentName){
+        //answer presidents
+        ansPresidents(intent, session, callback);
+    } else if("PlayAnimals" === intentName){
+        //play animals game
+        playAnimals(intent, session, callback);
+    } else if("AnsAnimals" === intentName){
+        //answer animals
+        ansAnimals(intent, session, callback);
+    } else if("PlayEasy" === intentName){
         //play easy game
         easyGame(intent, session, callback);
     } else if("AnsEasy" === intentName){
@@ -543,6 +555,40 @@ function onSessionEnded(sessionEndedRequest, session) {
 // this is the function that gets called to format the response to the user when they first boot the app
 
 function getWelcomeResponse(session, callback) {
+    var sessionAttributes = {};
+    var shouldEndSession = false;
+    var cardTitle = "Welcome to Soundify";
+
+    console.log("Welcome Message Invoked");
+    var idx = getRandomArbitrary(0,soundDictIndexed.length);
+    console.log(idx);
+    // this incrementally constructs the SSML message combining voice in text into the same output stream
+    console.log(soundDictIndexed[idx]);
+
+    var audioOutput = "<speak>";
+        audioOutput = audioOutput +  "Welcome to Soundify. ";
+        audioOutput = audioOutput + "Your tool for identifying the sound based " +
+            "on sound prompt given by Alexa. You will hear a sound prompt like this one. <break time=\"1s\" />";
+        audioOutput = audioOutput + "<audio src=\"https://s3.amazonaws.com/soundify/alexa-compatible-sounds/animals/"+soundDictIndexed[idx];
+        audioOutput = audioOutput + ".mp3\" />";    
+        audioOutput = audioOutput + "<break time=\"1s\" /> Let's get started by choosing a category . " +
+            "Just say something like animals or presidents.";
+        audioOutput = audioOutput + "</speak>";
+
+    var speechOutput = "Welcome to Soundify. Your tool for identifying the sound based " +
+        "on sounds prompted through your Alexa.";
+
+    var cardOutput = "Welcome to Soundify. Your tool for identifying the sounds given through Alexa. ";
+
+    var repromptText = "Please start by choosing a difficulty level. " +
+        "For example, say something like easy, medium or hard. ";
+
+    
+    callback(sessionAttributes,
+            buildAudioResponse(cardTitle, audioOutput, cardOutput, repromptText, shouldEndSession));
+}
+
+function getWelcomeResponse2(session, callback) {
     var sessionAttributes = {};
     var shouldEndSession = false;
     var cardTitle = "Welcome to Soundify";
